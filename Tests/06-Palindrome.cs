@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
+using Palindrome;
+
 
 namespace Tests
 {
@@ -10,7 +12,7 @@ namespace Tests
         public void Palindrome_Test()
         {
             //Arrange
-            string original = Utils.RandomString(Utils.random.Next(5, 10));
+            string original = "reconocer";
             string result = "";
             //Act
             result = Palindrome.Program.Palindrome(original);

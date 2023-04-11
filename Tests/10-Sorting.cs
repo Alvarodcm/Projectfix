@@ -22,10 +22,7 @@ namespace Tests
             //Assert
             for (int i = 1; i < list.Count; i++)
             {
-                if (list[i-1] > list[i])
-                {
-                    throw new Exception("List is not sorted, element '" + list[i - 1] + "' (" + (i - 1) + ") is bigger than '" + list[i] + "' (" + i + ")");
-                }
+                Assert.IsTrue(list[i - 1] <= list[i], "List is not sorted, element '" + list[i - 1] + "' (" + (i - 1) + ") is bigger than '" + list[i] + "' (" + i + ")");
             }
         }
     }

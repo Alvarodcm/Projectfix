@@ -43,15 +43,15 @@ namespace Factorial
             {
                 sum += numbers[i];
             }
-            return sum;
+            return sum/ numbers.Count;
         }
-        public static ulong factorial_recursive(ulong n)
+        public static ulong factorial_recursive(float n)
         {
             if (n < 1)
             {
-                return factorial_recursive(n - 1);
+                return 1;
             }
-            return n * factorial_recursive(n - 1);
+            return (ulong)n * factorial_recursive(n - 1);
         }
         public static ulong factorial_for(ulong n)
         {
